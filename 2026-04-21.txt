@@ -10,6 +10,16 @@ msf> search cve-2014-0160
 
 $ sudo runuser -u _gvm -- gvmd --user=admin --new-password=new_password
 
+Install Docker
+$ sudo apt install docker.io docker-compose
+$ sudo systemctl enable --now docker
+$ sudo systemctl status docker
+$ sudo groupadd docker
+$ sudo usermod -aG docker $USER
+$ sudo docker --version
+$ sudo docker run hello-world
+
+Install Oracle DB via Docker
 $ sudo docker pull container-registry.oracle.com/database/free:latest
 $ mkdir -p ~/oracle_data
 $ sudo chown -R 54321:54322 ~/oracle_data
