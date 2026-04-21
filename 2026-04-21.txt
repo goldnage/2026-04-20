@@ -1,0 +1,29 @@
+# curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus
+/master/config/templates/metasploit-framework-wrappers/msfupdate.erb 
+> msfinstall && chmod 755 msfinstall && ./msfinstall
+
+# msfconsole
+
+msf> search cve-2014-0160
+
+# nmap 
+
+$ sudo runuser -u _gvm -- gvmd --user=admin --new-password=new_password
+
+$ sudo docker pull container-registry.oracle.com/database/free:latest
+$ mkdir -p ~/oracle_data
+$ sudo chown -R 54321:54322 ~/oracle_data
+
+$ sudo docker run -d \
+  --name oracle26ai \
+  -p 1521:1521 \
+  -e ORACLE_PWD=YourPassword123 \
+  -e ORACLE_CHARACTERSET=AL32UTF8 \
+  -v ~/oracle_data:/opt/oracle/oradata \
+  container-registry.oracle.com/database/free:latest
+
+$ sudo docker logs -f oracle26ai
+
+
+
+
