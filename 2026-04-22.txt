@@ -29,4 +29,12 @@ EXIT;
 
 $ mysql -u luke -p
 
+mysql> select * from user;
+
+show grants for 'mary'@'localhost;
+
+grant select, insert on abc.* to 'mary'@'localhost';
+
+revoke select on abc.* from 'mary'@'localhost';
+
 
